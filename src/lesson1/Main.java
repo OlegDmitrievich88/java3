@@ -17,11 +17,22 @@ public class Main {
         box.addFruit(new Apple(), 7);
         box.print();
         System.out.println(box.getWeight());
+
         Box<Orange> box1 = new Box<>();
         box1.addFruit(new Orange(), 9);
         box1.print();
         System.out.println(box1.getWeight());
+
+        Box<Orange> box2 = new Box<>();
+        box2.addFruit(new Orange(), 3);
+        box2.print();
+        System.out.println(box2.getWeight());
+
         System.out.println(box.compare(box1));
+
+        box1.boxINbox(box2);
+        box1.print();
+        box2.print();
     }
     public static void swap(String[] strings, int a, int b){
         String box = strings[a];
